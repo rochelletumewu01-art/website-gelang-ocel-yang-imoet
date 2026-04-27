@@ -1,0 +1,200 @@
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+body {
+    background-color: #fff9fb; /* Pink sangat muda */
+    color: #4a4a4a;
+    scroll-behavior: smooth;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 8%;
+    background: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.logo {
+    font-family: 'Pacifico', cursive;
+    font-size: 1.8rem;
+    color: #ff85a1; /* Pink Cerah */
+}
+
+.logo span { color: #ffc2d1; }
+
+.nav-links { display: flex; list-style: none; }
+.nav-links li { margin: 0 15px; }
+.nav-links a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 600;
+    transition: 0.3s;
+}
+.nav-links a:hover { color: #ff85a1; }
+
+.cart-icon {
+    font-size: 1.3rem;
+    color: #ff85a1;
+    cursor: pointer;
+    position: relative;
+}
+
+#cart-count {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background: #ff4d6d;
+    color: #fff;
+    font-size: 0.7rem;
+    padding: 2px 6px;
+    border-radius: 50%;
+}
+
+/* Hero Section */
+.hero {
+    height: 70vh;
+    background: linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.4)), 
+                url('https://images.unsplash.com/photo-1590548784585-64548b5210b1?q=80&w=1500') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    color: #ff4d6d;
+    margin-bottom: 20px;
+}
+
+.btn-hero {
+    padding: 15px 40px;
+    background: #ff85a1;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(255, 133, 161, 0.4);
+    transition: 0.3s;
+}
+
+.btn-hero:hover { transform: scale(1.05); background: #ff4d6d; }
+
+/* Product Section */
+.products { padding: 80px 8%; }
+.section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 50px;
+    color: #ff4d6d;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.03);
+    transition: 0.4s;
+    position: relative;
+    text-align: center;
+}
+
+.product-card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(255, 133, 161, 0.15); }
+
+.badge {
+    position: absolute;
+    top: 25px; left: 25px;
+    background: #ff85a1;
+    color: #fff;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    z-index: 10;
+}
+
+.img-container {
+    width: 100%;
+    height: 250px;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.product-card img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.product-card:hover img { transform: scale(1.1); }
+
+.price {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #ff85a1;
+    margin: 10px 0;
+}
+
+.cart-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: #f0f0f0;
+    color: #555;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.cart-btn:hover { background: #ffc2d1; color: #fff; }
+
+/* About Section */
+.about { background: #ffeef2; padding: 80px 8%; text-align: center; }
+.about-container { max-width: 800px; margin: 0 auto; }
+.about h2 { margin-bottom: 20px; color: #ff4d6d; }
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+.f-item {
+    background: #fff;
+    padding: 10px 20px;
+    border-radius: 15px;
+    font-weight: 600;
+    color: #ff85a1;
+}
+
+/* Footer */
+footer { padding: 60px 8% 20px; text-align: center; background: #fff; }
+.footer-content { margin-bottom: 40px; }
+.socials i { font-size: 1.5rem; margin: 0 10px; color: #ff85a1; cursor: pointer; }
+.copyright { border-top: 1px solid #eee; padding-top: 20px; font-size: 0.9rem; color: #bbb; }
+
+/* Mobile Responsif */
+@media (max-width: 768px) {
+    .nav-links { display: none; }
+    .hero-content h1 { font-size: 2.2rem; }
+    .products { padding: 40px 5%; }
+}
